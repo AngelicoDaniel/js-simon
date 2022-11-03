@@ -35,8 +35,11 @@ function game(){
         if(userNumbers[i] == simonNumbers[i])
         result.push(userNumbers[i])
     }
+    const container = document.querySelector('body')
+    let risultato = document.createElement('div')
+    container.append(risultato);
+    risultato.innerHTML = `hai indovinato ${result} numeri. il risultato è ${result.length}`;
 }
-
 
 
 
