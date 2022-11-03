@@ -12,12 +12,29 @@ for (let i = 0; i < 5; i++){
     console.log(simonNumber)
     simonNumbers.push(simonNumber)
 }
-console.log(simonNumbers)
+//console.log(simonNumbers)
+simon.innerText = simonNumbers
 
 
 
+//funzione principale
+setTimeout(game, 41000)
+function game(){
+    let userNumbers = [];
+    for (i = 0; i < 5; i++){
+        let userNumber = prompt('simon says?')
+        userNumbers.push(userNumber)
+    }
+    console.log(userNumbers)
+    console.log(simonNumbers)
+}
 
 
+//numeri scompaiono dopo 4 secondi
+setTimeout(none, 40000)
+function none(){
+    simon.style.display = 'none';
+}
 
 
 //funzione numero random
