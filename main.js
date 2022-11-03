@@ -4,21 +4,24 @@
 
 let simon = document.getElementById('simon-says')
 let simonNumbers = [];
-let simonNumber
+let simonNumber;
 
+//numeri scompaiono dopo 4 secondi
+setTimeout(none, 3000)
+function none(){
+    simon.style.display = 'none';
+}
 
 for (let i = 0; i < 5; i++){
     simonNumber = getRandomInt(1, 100)
-    console.log(simonNumber)
-    simonNumbers.push(simonNumber)
+    //console.log(simonNumber)
+    simonNumbers.push(parseInt(simonNumber))
 }
 //console.log(simonNumbers)
 simon.innerText = simonNumbers
 
-
-
 //funzione principale
-setTimeout(game, 41000)
+setTimeout(game, 3100)
 function game(){
     let userNumbers = [];
     for (i = 0; i < 5; i++){
@@ -27,14 +30,14 @@ function game(){
     }
     console.log(userNumbers)
     console.log(simonNumbers)
+    let result = [];
+    for (i = 0; i < 5; i++){
+        if(userNumbers[i] == simonNumbers[i])
+        result.push(userNumbers[i])
+    }
 }
 
 
-//numeri scompaiono dopo 4 secondi
-setTimeout(none, 40000)
-function none(){
-    simon.style.display = 'none';
-}
 
 
 //funzione numero random
